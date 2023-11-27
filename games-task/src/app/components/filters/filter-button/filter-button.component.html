@@ -1,0 +1,8 @@
+<button
+  type="button"
+  class="filter-button"
+  [ngClass]="isActive ? 'active' : 'unactive'"
+  (click)="onButtonClick()"
+>
+  {{ label }}
+</button>

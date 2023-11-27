@@ -1,0 +1,50 @@
+.container-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.container {
+  max-width: 1200px;
+}
+
+.games {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.875rem;
+}
+
+.error {
+  color: #94a2ad;
+  line-height: 1.875rem;
+  width: 100%;
+  margin-top: 5rem;
+
+  div {
+    font-size: 20px !important;
+  }
+}
+
+.games-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.reset {
+  margin-top: 1.25rem;
+  color: #f03535;
+}
+
+@media only screen and (max-width: 1113px) {
+  .container-wrapper {
+    align-items: stretch;
+  }
+}
+
+@media only screen and (min-width: 1114px) {
+  .container-wrapper {
+    align-items: center;
+  }
+}

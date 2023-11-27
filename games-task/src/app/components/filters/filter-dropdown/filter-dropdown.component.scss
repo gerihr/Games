@@ -1,0 +1,46 @@
+.filter-dropdown {
+  position: relative;
+}
+
+.selected-option-dropdown {
+  padding: 0.625rem;
+  color: white;
+  border: 0rem;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  border-color: #292c2f;
+  display: flex;
+  gap: 0.313rem;
+  align-items: center;
+  max-width: max-content;
+
+  &:hover {
+    background-color: #1a1c1d !important;
+  }
+}
+
+.options-container {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  border-radius: 0.25rem;
+  background-color: white;
+  color: black;
+
+  .open {
+    display: block;
+  }
+}
+
+.option {
+  padding: 0.625rem;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  background-color: white;
+  color: black;
+
+  &:hover {
+    background-color: #f5f8fa !important;
+  }
+}

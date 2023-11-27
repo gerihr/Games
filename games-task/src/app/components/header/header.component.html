@@ -1,0 +1,62 @@
+<div class="header-wrapper">
+  <div class="item-wrapper">
+    <div style="gap: 20px" class="desktop" *ngFor="let button of buttonFilters">
+      <app-filter-button [buttonLabel]="button"></app-filter-button>
+    </div>
+    <div class="desktop">
+      <app-filter-dropdown [options]="dropdownFilter"></app-filter-dropdown>
+    </div>
+
+    <div class="mobile">
+      <app-filter-dropdown [options]="getValue()"></app-filter-dropdown>
+    </div>
+  </div>
+
+  <div class="item-wrapper">
+    <div class="desktopRow" style="margin-left: 5rem">
+      <div class="header-wrapper">
+        <app-filter-label-dropdown
+          label="genre:"
+          [options]="genreFilter"
+          mobileLabel="genres"
+          [value]="filterService.getGenreFilter()"
+          (chosenFilter)="filterService.setGenreFilter($event)"
+        ></app-filter-label-dropdown>
+        <app-filter-label-dropdown
+          label="providers"
+          mobileLabel="providers"
+          [options]="providers$ | async"
+          hasImage="true"
+          [value]="filterService.getProviderFilter()"
+          (chosenFilter)="filterService.setProviderFilter($event)"
+        ></app-filter-label-dropdown>
+      </div>
+    </div>
+
+    <app-filter-input
+      [value]="filterValue"
+      (valueChange)="onFilterChange($event)"
+    ></app-filter-input>
+  </div>
+</div>
+
+<div
+  class="header-wrapper mobileRow"
+  style="gap: 10px; justify-content: center"
+>
+  <app-filter-label-dropdown
+    label="genre:"
+    [options]="genreFilter"
+    mobileLabel="genres"
+    [value]="filterService.getGenreFilter()"
+    (chosenFilter)="filterService.setGenreFilter($event)"
+  ></app-filter-label-dropdown>
+  <app-filter-label-dropdown
+    label="providers"
+    mobileLabel="providers"
+    [options]="providers$ | async"
+    hasImage="true"
+    [value]="filterService.getProviderFilter()"
+    (chosenFilter)="filterService.setProviderFilter($event)"
+  ></app-filter-label-dropdown>
+</div>

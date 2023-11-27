@@ -1,0 +1,24 @@
+<div class="filter-dropdown" [class.open]="isDropdownOpen">
+  <div
+    class="selected-option-dropdown"
+    (click)="toggleDropdown()"
+    [ngClass]="isActive == true ? 'active' : 'unactive'"
+  >
+    {{ selectedOption || "More" | titlecase }}
+    <span class="material-icons-outlined" *ngIf="!isDropdownOpen"
+      >expand_more</span
+    >
+    <span class="material-icons-outlined" *ngIf="isDropdownOpen"
+      >expand_less</span
+    >
+  </div>
+  <div class="options-container" *ngIf="isDropdownOpen">
+    <div
+      class="option"
+      *ngFor="let option of options"
+      (click)="onSelect(option)"
+    >
+      {{ option | titlecase }}
+    </div>
+  </div>
+</div>

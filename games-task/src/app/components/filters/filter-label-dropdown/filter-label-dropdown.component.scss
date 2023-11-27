@@ -1,0 +1,84 @@
+.custom-label-dropdown {
+  position: relative;
+  border: 0.063rem solid #8b8f93;
+  border-radius: 0.375rem;
+  margin-right: 0.25rem;
+
+  &:hover {
+    background-color: #1a1c1d;
+    .dropdown-option {
+      color: #009c5b;
+    }
+  }
+
+  .dropdown-label {
+    color: #8b8f93;
+  }
+
+  .image-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .selected-option {
+    padding: 0.625rem;
+    background-color: #292c2f;
+    color: white;
+    border: 0rem;
+    border-radius: 0.375rem;
+    min-width: 4.625rem;
+    cursor: pointer;
+    border-color: #292c2f;
+    display: flex;
+    gap: 0.313rem;
+    align-items: center;
+  }
+
+  .options-container {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    border-radius: 0.25rem;
+    background-color: white !important;
+    color: black;
+
+    .open {
+      display: block;
+    }
+  }
+
+  .option {
+    padding: 0.625rem;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    background-color: white;
+    color: black;
+    display: flex;
+    gap: 0.313rem;
+
+    &:hover {
+      background-color: #f2f2f2 !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 844px) {
+  .showDesktopLabels {
+    display: none;
+  }
+
+  .hideLabels {
+    display: flex !important;
+  }
+}
+
+@media only screen and (min-width: 843px) {
+  .showDesktopLabels {
+    display: flex;
+  }
+
+  .hideLabels {
+    display: none !important;
+  }
+}

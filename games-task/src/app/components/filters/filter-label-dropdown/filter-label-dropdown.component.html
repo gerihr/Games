@@ -1,0 +1,49 @@
+<div class="custom-label-dropdown" [class.open]="isDropdownOpen">
+  <div class="selected-option" (click)="toggleDropdown()">
+    <span class="dropdown-label showDesktopLabels" *ngIf="!selectedOption"
+      >By {{ label }}</span
+    >
+    <span class="dropdown-option showDesktopLabels">
+      {{ (selectedOption | titlecase) || "all" }}
+    </span>
+
+    <span class="dropdown-option hideLabels">
+      {{ (selectedOption | titlecase) || "all " + mobileLabel }}
+    </span>
+
+    <span class="material-icons-outlined" *ngIf="!isDropdownOpen"
+      >expand_more</span
+    >
+
+    <span class="material-icons-outlined" *ngIf="isDropdownOpen"
+      >expand_less</span
+    >
+  </div>
+  <div *ngIf="isDropdownOpen">
+    <div *ngIf="!hasImage">
+      <div class="options-container">
+        <div
+          class="option"
+          *ngFor="let option of options"
+          (click)="onSelect(option)"
+        >
+          {{ option | titlecase }}
+        </div>
+      </div>
+    </div>
+    <div *ngIf="hasImage">
+      <div class="options-container">
+        <div
+          class="option"
+          *ngFor="let option of options"
+          (click)="onSelect(option.name)"
+        >
+          <div class="image-wrapper">
+            <img [src]="option.logo" width="16" height="16" />
+          </div>
+          {{ option.name | titlecase }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+.header-wrapper {
+  background-color: #292c2f;
+  max-width: 1200px;
+  border-radius: 0.75rem;
+  height: 3.5rem;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.mobile {
+  display: none;
+}
+
+.item-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+@media only screen and (max-width: 630px) {
+  .desktopRow {
+    display: none;
+  }
+
+  .mobileRow {
+    display: flex !important;
+  }
+}
+
+/* Desktop styles - hide for mobile */
+@media only screen and (min-width: 631px) {
+  .mobileRow {
+    display: none;
+  }
+}

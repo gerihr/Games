@@ -1,0 +1,61 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~material-icons/iconfont/material-icons.css";
+
+$tablet-width: 768px;
+$desktop-width: 1024px;
+$mobile-large-width: 400px;
+$mobile-small-width: 360px;
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin mobileL-large {
+  @media (min-width: #{$mobile-large-width}) and (max-width: #{$tablet-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin mobileL-small {
+  @media (max-width: #{$mobile-large-width - 1px}) {
+    @content;
+  }
+}
+
+* {
+  font-size: 16px !important;
+  font-family: "Inter";
+}
+
+.active {
+  background-color: #00c471 !important;
+}
+
+.unactive {
+  background-color: #292c2f !important;
+}
+
+@media only screen and (max-width: 1109px) {
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: flex !important;
+  }
+}
+
+/* Desktop styles - hide for mobile */
+@media only screen and (min-width: 1110px) {
+  .mobile {
+    display: none;
+  }
+}

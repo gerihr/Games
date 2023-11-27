@@ -1,0 +1,21 @@
+<div class="container-wrapper">
+  <app-header> </app-header>
+  <div
+    *ngIf="
+      (dataService.getFilteredGames() | async)?.length == 0 ||
+      !(dataService.getFilteredGames() | async)
+    "
+    class="container error"
+  >
+    <div>Nothing was found for this query. Please change the query.</div>
+    <div type="button" class="reset" (click)="resetFilters()">Reset filter</div>
+  </div>
+  <div class="container games">
+    <div
+      class="games-wrapper"
+      *ngFor="let game of dataService.getFilteredGames() | async"
+    >
+      <app-game-item [gameImage]="game.image"></app-game-item>
+    </div>
+  </div>
+</div>

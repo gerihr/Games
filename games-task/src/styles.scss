@@ -1,33 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~material-icons/iconfont/material-icons.css";
 
-$tablet-width: 768px;
-$desktop-width: 1024px;
-$mobile-large-width: 400px;
-$mobile-small-width: 360px;
-
-@mixin desktop {
-  @media (min-width: #{$desktop-width}) {
-    @content;
-  }
-}
-
-@mixin tablet {
-  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
-    @content;
-  }
-}
-
-@mixin mobileL-large {
-  @media (min-width: #{$mobile-large-width}) and (max-width: #{$tablet-width - 1px}) {
-    @content;
-  }
-}
-
-@mixin mobileL-small {
-  @media (max-width: #{$mobile-large-width - 1px}) {
-    @content;
-  }
+:root {
+  --light-grey-color: #8b8f93;
+  --medium-grey-color: #292c2f;
+  --dark-grey-color: #1a1c1d;
+  --green-active-color: #00c471;
+  --green-active-green-color: #009c5b;
 }
 
 * {
@@ -36,11 +15,11 @@ $mobile-small-width: 360px;
 }
 
 .active {
-  background-color: #00c471 !important;
+  background-color: var(--green-active-color) !important;
 }
 
 .unactive {
-  background-color: #292c2f !important;
+  background-color: var(--medium-grey-color) !important;
 }
 
 @media only screen and (max-width: 1109px) {

@@ -1,18 +1,18 @@
 .custom-label-dropdown {
   position: relative;
-  border: 0.063rem solid #8b8f93;
+  border: 0.063rem solid var(--light-grey-color);
   border-radius: 0.375rem;
   margin-right: 0.25rem;
 
   &:hover {
-    background-color: #1a1c1d;
+    background-color: var(--dark-grey-color);
     .dropdown-option {
-      color: #009c5b;
+      color: var(--green-active-green-color);
     }
   }
 
   .dropdown-label {
-    color: #8b8f93;
+    color: var(--light-grey-color);
   }
 
   .image-wrapper {
@@ -22,13 +22,13 @@
 
   .selected-option {
     padding: 0.625rem;
-    background-color: #292c2f;
+    background-color: var(--medium-grey-color);
     color: white;
     border: 0rem;
     border-radius: 0.375rem;
     min-width: 4.625rem;
     cursor: pointer;
-    border-color: #292c2f;
+    border-color: var(--medium-grey-color);
     display: flex;
     gap: 0.313rem;
     align-items: center;

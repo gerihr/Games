@@ -8,14 +8,14 @@
   border: 0rem;
   border-radius: 0.375rem;
   cursor: pointer;
-  border-color: #292c2f;
+  border-color: var(--medium-grey-color);
   display: flex;
   gap: 0.313rem;
   align-items: center;
   max-width: max-content;
 
   &:hover {
-    background-color: #1a1c1d !important;
+    background-color: var(--dark-grey-color) !important;
   }
 }
 
